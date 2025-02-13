@@ -103,9 +103,12 @@
         y: 0,
       };
       let name = prompt("Vaše jméno:");
-      while (name.length > 16) {
+      while (name && name.length > 16) {
         alert("Příliš dlouhé jméno (může mít maximálně 16 znaků).");
         name = prompt("Vaše jméno:");
+      }
+      if (!name) {
+        name = "";
       }
       let rocket = {
         x: 0,
